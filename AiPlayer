@@ -1,0 +1,15 @@
+ 
+
+The "skipStatus" property is a "getter" and a "setter" for the "skip" instance variable. It allows you to access and assign values to the "skip" variable from outside the "AiPlayer" class. 
+
+  
+
+The "turn()" method is the main method that controls the AI player's turn. He evaluates the last discarded card and tries to find a card in the player's hand that can be played. If the player does not have a playable card, he draws a card from the pile. 
+
+  
+
+The "addCards(Card other)" method adds a card to the player's hand. It is called when the player draws a card from the pile or receives a card from another player. 
+
+  
+
+The "turnEnd()" method is called at the end of the player's turn. He sends a message 
