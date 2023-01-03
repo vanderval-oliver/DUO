@@ -1,0 +1,7 @@
+This script appears to be a MonoBehaviour script in the Unity engine that is being used to create a menu for a game. The script has a number of variables at the top that are being used to store references to various objects in the Unity scene, such as UI text and game objects.
+
+The script has a Start() function that is called when the script is first initialized, which appears to be setting up the menu by performing a number of tasks. It sets the text of the "vers" Text object to the version number of the application, then it iterates over an array of "cards" game objects and sets the color and number for each of them by assigning a random color and number to the objects.
+
+The script then creates a number of new game objects using prefabs and adds them to a list called "scroll2". It then positions these game objects along the right side of the screen.
+
+The script also includes a number of helper functions, such as returnRandColor() and returnColor(), which are used to return a random color string and a color object, respectively.
