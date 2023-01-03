@@ -1,0 +1,7 @@
+This script appears to be a MonoBehaviour script in the Unity engine that is being used to create and manage "Card" objects in a game. The Card objects have a number, a color, and a game object associated with them.
+
+The script has a constructor that is used to create new Card objects, and it also has a number of functions that are used to load the Card objects into the Unity scene, get or set the Card's number and color, and compare Card objects to see if they are equal.
+
+The "loadCard()" function is used to load a Card object into the Unity scene, either at a specific position or at a default position. The function instantiates a new game object, sets its name, color, and number (if it is a regular card), and then sets the texture of the object based on its color. Finally, it sets the parent of the object and scales it to the default size, then returns the object.
+
+The "returnColor()" function is a helper function that returns a color object based on the string passed to it. The "Equals()" function is a custom implementation of the original Equals function that allows Card objects to be compared based on either their number or color. The "changeColor()" function is a mutator function that allows the color of a wild card to be changed.
