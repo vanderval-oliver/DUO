@@ -5,3 +5,46 @@ The script has a constructor that is used to create new Card objects, and it als
 The "loadCard()" function is used to load a Card object into the Unity scene, either at a specific position or at a default position. The function instantiates a new game object, sets its name, color, and number (if it is a regular card), and then sets the texture of the object based on its color. Finally, it sets the parent of the object and scales it to the default size, then returns the object.
 
 The "returnColor()" function is a helper function that returns a color object based on the string passed to it. The "Equals()" function is a custom implementation of the original Equals function that allows Card objects to be compared based on either their number or color. The "changeColor()" function is a mutator function that allows the color of a wild card to be changed.
+ using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CardGame : MonoBehaviour
+{
+    // Prefab for the Card game objects
+    public GameObject cardPrefab;
+
+    void Start()
+    {
+        // Create a new Card object with number 5 and color "Green"
+        Card myCard = new Card(5, "Green", cardPrefab);
+
+        // Load the Card into the scene at position (0, 0)
+        GameObject cardObject = myCard.loadCard(0, 0, transform);
+
+        // Change the color of the Card to "Blue"
+        myCard.changeColor("Blue");
+
+        // Get the number and color of the Card
+        int cardNumber = myCard.getNumb();
+        string cardColor = myCard.getColor();
+        Debug.Log("Card number: " + cardNumber + ", Card color: " + cardColor);
+
+        // Create a new Card object with number 10 and color "Red"
+        Card otherCard = new Card(10, "Red", cardPrefab);
+
+        // Check if the two Card objects are equal
+        if (myCard.Equals(otherCard))
+        {
+            Debug.Log("The cards are equal!");
+        }
+        else
+        {
+            Debug.Log("The cards are not equal.");
+        }
+    }
+}
+
+This script creates a new Card object with number 5 and color "Green", then loads it into the scene at position (0, 0). 
+It then changes the color of the Card to "Blue" and gets the number and color of the Card. It then creates a new Card object with number 10 and color "Red", 
+and checks if the two Card objects are equal by using the custom Equals() function defined in the Card script.
